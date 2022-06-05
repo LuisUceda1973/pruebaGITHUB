@@ -1,0 +1,205 @@
+/*------ RESETEO DE MARGENES ---------*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #1D202B;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+}
+
+
+
+
+
+nav{
+  background: #ff0101;
+  height: 80px;
+  width: 100%;
+}
+.enlace{
+  position: absolute;
+  padding: 20px 80px;
+}
+.logo{
+  height: 45px;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 75px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+	text-decoration: none;
+}
+li a.active, li a:hover{
+  background: #000090;
+  transition: .5s;
+	text-decoration: none;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+/*-----------------CABEZERA----------------*/
+
+
+
+.contenedor {
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+	display: grid;
+	grid-template-rows: 0.2fr 1.6fr 1fr 0.15fr;
+	gap: 60px;
+
+	
+}
+
+.contenedor-otro {
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+	display: grid;
+	grid-template-rows: 0.2fr 0.1fr 1fr 0.15fr;
+	gap: 20px;
+
+	
+}
+
+.cabezera {
+
+	text-align: center;
+	padding: 50px;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+}
+
+.cabezera a{
+	text-decoration: none;
+}
+
+.cabezera .boton {
+	background: #b6df00;
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 100px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+}
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+.contenedor-directo {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.contenedor-directo-otro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+	
+}
+
+.card .textos {
+	height: 100%;
+	
+	
+}
+.footer {
+	background-color: red;
+	text-align: center;
+	padding: 10px;
+	
+	
+}
+
+
+@media (max-width: 952px){
+  .enlace{
+      padding-left: 20px;
+  }
+  nav ul li a{
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+  }
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+  }
+  nav ul li a{
+      font-size: 20px;
+  }
+  li a:hover, li a.active{
+      background: none;
+      color: red;
+  }
+  #check:checked ~ ul{
+      left:0;
+  }
+}
